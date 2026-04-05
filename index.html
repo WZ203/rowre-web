@@ -135,7 +135,7 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(3.2rem, 8vw, 6.2rem);
+      font-size: clamp(3.2rem, 8vw, 6.3rem);
       line-height: 0.95;
       letter-spacing: -0.04em;
       font-weight: 500;
@@ -156,11 +156,11 @@
       margin-top: 28px;
     }
 
-    .microtrust {
+    .hero-note {
       margin-top: 12px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.92rem;
-      color: #6d6863;
+      color: #6f6a64;
     }
 
     .hero-side {
@@ -182,7 +182,7 @@
       overflow: hidden;
       min-height: 480px;
       background:
-        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
+        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08)),
         url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80")
         center center / cover no-repeat;
     }
@@ -465,11 +465,6 @@
       font-size: 1rem;
       cursor: pointer;
       font-family: Arial, Helvetica, sans-serif;
-      transition: 0.2s ease;
-    }
-
-    .submit:hover {
-      opacity: 0.94;
     }
 
     .mini-note {
@@ -493,18 +488,17 @@
       right: 20px;
       bottom: 20px;
       z-index: 50;
-      background: #25d366;
+      background: #25D366;
       color: white;
       padding: 14px 18px;
       border-radius: 999px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.20);
-      transition: 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.22);
     }
 
     .whatsapp-float:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     @media (max-width: 980px) {
@@ -587,7 +581,7 @@
               <a href="#contacto" class="btn btn-dark">Quiero que me contacten</a>
               <a href="#servicios" class="btn">Ver enfoque</a>
             </div>
-            <div class="microtrust">Te contactamos directamente, sin intermediarios.</div>
+            <p class="hero-note">Te contactamos directamente, sin intermediarios.</p>
           </div>
 
           <div class="hero-side">
@@ -636,7 +630,8 @@
           <div class="section-copy">
             No buscamos recargar el mensaje ni prometer más de lo necesario.
             Nuestro objetivo es presentarnos con seriedad, transmitir criterio y
-            abrir una conversación con quienes necesitan apoyo inmobiliario real.
+            abrir una conversación con quienes necesitan apoyo inmobiliario
+            real.
           </div>
         </div>
 
@@ -668,4 +663,98 @@
 
         <div class="gallery">
           <div class="ph ph-1"></div>
-          <
+          <div class="ph ph-2"></div>
+          <div class="ph ph-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band-inner">
+        <h2>Si necesitas orientación inmobiliaria, conversemos</h2>
+        <p>
+          Déjanos tus datos y nos pondremos en contacto para conocer tu caso y
+          orientarte de manera directa.
+        </p>
+        <a href="#contacto" class="btn">Quiero que me contacten</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Déjanos tus datos</h2>
+            <p>
+              Esta página está pensada para captar interesados y abrir una
+              conversación directa.
+            </p>
+            <p>ROW Bienes Raíces</p>
+            <p>
+              <a href="mailto:contacto@rowre.cl">contacto@rowre.cl</a><br />
+              <a href="tel:+56999917298">+56 9 9991 7298</a>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <p class="form-intro">
+              Déjanos tus datos y te contactaremos directamente para revisar tu caso.
+            </p>
+
+            <form action="https://formspree.io/f/TU_ENDPOINT" method="POST">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" type="text" required />
+                </div>
+
+                <div class="field">
+                  <label for="telefono">Teléfono</label>
+                  <input id="telefono" name="telefono" type="tel" required />
+                </div>
+
+                <div class="field-full">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+
+                <div class="field-full">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Cuéntanos brevemente qué necesitas"
+                  ></textarea>
+                </div>
+
+                <div class="field-full">
+                  <button class="submit" type="submit">Enviar</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="mini-note">
+              Nos pondremos en contacto contigo a la brevedad.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      ROW Bienes Raíces · Página de contacto y presentación
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/56999917298?text=Hola%2C%20quiero%20asesor%C3%ADa%20inmobiliaria"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    WhatsApp
+  </a>
+</body>
+</html>
