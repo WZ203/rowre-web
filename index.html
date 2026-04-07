@@ -3,11 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROW Bienes Raíces</title>
+
+  <title>ROW Bienes Raíces | Asesoría inmobiliaria</title>
   <meta
     name="description"
     content="Asesoría inmobiliaria con criterio profesional y enfoque directo. Déjanos tus datos y te contactaremos."
   />
+  <meta name="theme-color" content="#050505" />
+
+  <!-- SEO / Social -->
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ROW Bienes Raíces | Asesoría inmobiliaria" />
+  <meta
+    property="og:description"
+    content="Asesoría inmobiliaria con criterio profesional y enfoque directo."
+  />
+  <meta property="og:site_name" content="ROW Bienes Raíces" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ROW Bienes Raíces | Asesoría inmobiliaria" />
+  <meta
+    name="twitter:description"
+    content="Asesoría inmobiliaria con criterio profesional y enfoque directo."
+  />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="12" fill="%23050505"/>
+      <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="%23f5f1eb">R</text>
+    </svg>'
+  />
+
   <style>
     :root {
       --bg: #f3f0eb;
@@ -18,6 +49,8 @@
       --line: rgba(0, 0, 0, 0.12);
       --max: 1220px;
       --radius: 18px;
+      --focus: #1f5eff;
+      --card-shadow: 0 10px 30px rgba(0,0,0,0.04);
     }
 
     * {
@@ -33,6 +66,9 @@
       background: var(--bg);
       color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     img {
@@ -45,19 +81,34 @@
       text-decoration: none;
     }
 
+    a,
+    button,
+    input,
+    textarea {
+      transition: 0.2s ease;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
     .container {
       width: min(var(--max), calc(100% - 48px));
       margin: 0 auto;
     }
 
     .topbar {
-      padding: 26px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(243, 240, 235, 0.92);
+      background: rgba(243, 240, 235, 0.9);
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
     .topbar-inner {
@@ -68,11 +119,29 @@
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       font-size: 1rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: var(--dark);
+      color: var(--light);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
     }
 
     .nav {
@@ -101,6 +170,7 @@
       transition: 0.2s ease;
       cursor: pointer;
       background: transparent;
+      text-align: center;
     }
 
     .btn:hover {
@@ -111,6 +181,11 @@
       background: var(--dark);
       color: white;
       border-color: var(--dark);
+    }
+
+    .btn-dark:hover {
+      background: #161616;
+      border-color: #161616;
     }
 
     .hero {
@@ -135,7 +210,7 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(3.2rem, 8vw, 6.3rem);
+      font-size: clamp(3.2rem, 8vw, 6.1rem);
       line-height: 0.95;
       letter-spacing: -0.04em;
       font-weight: 500;
@@ -180,11 +255,12 @@
       margin-top: 34px;
       border-radius: 26px;
       overflow: hidden;
-      min-height: 480px;
+      min-height: 500px;
       background:
-        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08)),
+        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
         url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80")
         center center / cover no-repeat;
+      box-shadow: var(--card-shadow);
     }
 
     .section-dark {
@@ -281,6 +357,7 @@
       border-radius: var(--radius);
       padding: 28px;
       min-height: 230px;
+      box-shadow: var(--card-shadow);
     }
 
     .card h3 {
@@ -312,6 +389,7 @@
       background-size: cover;
       background-position: center;
       border: 1px solid var(--line);
+      box-shadow: var(--card-shadow);
     }
 
     .ph-1 {
@@ -363,6 +441,11 @@
       border-color: #f3ede4;
     }
 
+    .cta-band .btn:hover {
+      background: #fff6ec;
+      border-color: #fff6ec;
+    }
+
     .contact {
       padding: 100px 0 110px;
     }
@@ -399,6 +482,7 @@
       color: white;
       border-radius: 24px;
       padding: 34px;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.12);
     }
 
     .form-intro {
@@ -439,11 +523,16 @@
       border: 1px solid rgba(255,255,255,0.24);
       background: transparent;
       color: white;
-      border-radius: 0;
+      border-radius: 12px;
       padding: 16px 14px;
       font-size: 1rem;
       font-family: Arial, Helvetica, sans-serif;
       outline: none;
+    }
+
+    input:hover,
+    textarea:hover {
+      border-color: rgba(255,255,255,0.4);
     }
 
     input::placeholder,
@@ -465,6 +554,13 @@
       font-size: 1rem;
       cursor: pointer;
       font-family: Arial, Helvetica, sans-serif;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .submit:hover {
+      transform: translateY(-1px);
+      background: #f5efe8;
     }
 
     .mini-note {
@@ -483,6 +579,13 @@
       font-size: 0.92rem;
     }
 
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     .whatsapp-float {
       position: fixed;
       right: 20px;
@@ -499,6 +602,19 @@
 
     .whatsapp-float:hover {
       transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.26);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     @media (max-width: 980px) {
@@ -550,14 +666,22 @@
         bottom: 14px;
         padding: 12px 16px;
       }
+
+      .brand {
+        font-size: 0.92rem;
+      }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">ROW Bienes Raíces</div>
-      <nav class="nav">
+      <a href="#" class="brand" aria-label="Ir al inicio de ROW Bienes Raíces">
+        <span class="brand-mark">R</span>
+        <span>ROW Bienes Raíces</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
         <a href="#servicios">Enfoque</a>
         <a href="#vision">Visión</a>
         <a href="#contacto">Contacto</a>
@@ -566,14 +690,14 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-grid">
           <div>
             <div class="eyebrow">Asesoría y gestión inmobiliaria</div>
-            <h1>Asesoría inmobiliaria con criterio profesional y enfoque directo</h1>
+            <h1 id="hero-title">Asesoría inmobiliaria con criterio profesional y enfoque directo</h1>
             <p class="hero-copy">
-              En Row Bienes Raíces ayudamos a personas y empresas a evaluar,
+              En ROW Bienes Raíces ayudamos a personas y empresas a evaluar,
               ordenar y proyectar decisiones inmobiliarias con una mirada clara,
               sobria y profesional.
             </p>
@@ -594,17 +718,17 @@
           </div>
         </div>
 
-        <div class="hero-image"></div>
+        <div class="hero-image" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section class="section-dark" id="servicios">
+    <section class="section-dark" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
         <div class="split-dark">
           <div class="dark-panel">
-            <h2 class="dark-title">Qué hacemos</h2>
+            <h2 class="dark-title" id="servicios-title">Qué hacemos</h2>
             <div class="dark-text">
-              Row Bienes Raíces entrega acompañamiento en materias
+              ROW Bienes Raíces entrega acompañamiento en materias
               inmobiliarias desde una perspectiva práctica, ordenada y bien
               fundamentada, orientada a quienes necesitan claridad antes de dar
               el siguiente paso.
@@ -618,20 +742,19 @@
             </ul>
           </div>
 
-          <div class="image-block"></div>
+          <div class="image-block" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="vision">
+    <section class="section" id="vision" aria-labelledby="vision-title">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Un enfoque claro, sobrio y aterrizado</h2>
+          <h2 class="section-title" id="vision-title">Un enfoque claro, sobrio y aterrizado</h2>
           <div class="section-copy">
             No buscamos recargar el mensaje ni prometer más de lo necesario.
             Nuestro objetivo es presentarnos con seriedad, transmitir criterio y
-            abrir una conversación con quienes necesitan apoyo inmobiliario
-            real.
+            abrir una conversación con quienes necesitan apoyo inmobiliario real.
           </div>
         </div>
 
@@ -661,17 +784,17 @@
           </article>
         </div>
 
-        <div class="gallery">
-          <div class="ph ph-1"></div>
-          <div class="ph ph-2"></div>
-          <div class="ph ph-3"></div>
+        <div class="gallery" aria-label="Galería visual de ambiente inmobiliario">
+          <div class="ph ph-1" aria-hidden="true"></div>
+          <div class="ph ph-2" aria-hidden="true"></div>
+          <div class="ph ph-3" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
+    <section class="cta-band" aria-labelledby="cta-title">
       <div class="container cta-band-inner">
-        <h2>Si necesitas orientación inmobiliaria, conversemos</h2>
+        <h2 id="cta-title">Si necesitas orientación inmobiliaria, conversemos</h2>
         <p>
           Déjanos tus datos y nos pondremos en contacto para conocer tu caso y
           orientarte de manera directa.
@@ -680,11 +803,11 @@
       </div>
     </section>
 
-    <section class="contact" id="contacto">
+    <section class="contact" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-info">
-            <h2>Déjanos tus datos</h2>
+            <h2 id="contacto-title">Déjanos tus datos</h2>
             <p>
               Esta página está pensada para captar interesados y abrir una
               conversación directa.
@@ -702,20 +825,42 @@
             </p>
 
             <form action="https://formspree.io/f/mjgpjgjl" method="POST">
+              <input type="hidden" name="_subject" value="Nuevo contacto desde ROW Bienes Raíces" />
+              <input type="hidden" name="_language" value="es" />
+
               <div class="form-grid">
                 <div class="field">
                   <label for="nombre">Nombre</label>
-                  <input id="nombre" name="nombre" type="text" required />
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  />
                 </div>
 
                 <div class="field">
                   <label for="telefono">Teléfono</label>
-                  <input id="telefono" name="telefono" type="tel" required />
+                  <input
+                    id="telefono"
+                    name="telefono"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    required
+                  />
                 </div>
 
                 <div class="field-full">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required />
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
                 </div>
 
                 <div class="field-full">
@@ -724,6 +869,7 @@
                     id="mensaje"
                     name="mensaje"
                     placeholder="Cuéntanos brevemente qué necesitas"
+                    autocomplete="off"
                   ></textarea>
                 </div>
 
@@ -743,21 +889,20 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      ROW Bienes Raíces · Página de contacto y presentación
+    <div class="container footer-inner">
+      <div>ROW Bienes Raíces · Página de contacto y presentación</div>
+      <div>Asesoría inmobiliaria directa</div>
     </div>
   </footer>
 
   <a
     class="whatsapp-float"
-    href="https://wa.me/56999917298?text=Hola%2C%20quiero%20asesor%C3%ADa%20inmobiliaria"
+    href="https://wa.me/56999917298?text=Hola%2C%20quiero%20asesor%C3%ADa%20inmobiliaria%20con%20ROW%20Bienes%20Ra%C3%ADces"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="Abrir conversación por WhatsApp con ROW Bienes Raíces"
   >
     WhatsApp
   </a>
 </body>
 </html>
-
-
-
