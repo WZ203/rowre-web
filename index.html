@@ -7,13 +7,16 @@
   <title>ROW Bienes Raíces | Asesoría inmobiliaria y tasaciones en Chile</title>
   <meta
     name="description"
-    content="ROW Bienes Raíces ofrece asesoría inmobiliaria y tasaciones con enfoque profesional, técnico y directo. Evaluamos escenarios, ordenamos decisiones y te contactamos de forma personalizada."
+    content="ROW Bienes Raíces ofrece asesoría inmobiliaria y tasaciones en Chile con enfoque técnico, comercial y directo. Evaluamos propiedades, analizamos escenarios y orientamos decisiones con criterio profesional."
   />
   <meta name="theme-color" content="#050505" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="ROW Bienes Raíces" />
   <meta name="format-detection" content="telephone=no" />
-  <meta name="keywords" content="asesoría inmobiliaria, tasaciones, tasación inmobiliaria, bienes raíces, evaluación de propiedades, asesoría en bienes raíces, ROW Bienes Raíces, Chile" />
+  <meta
+    name="keywords"
+    content="asesoría inmobiliaria, tasaciones, tasación inmobiliaria, tasador inmobiliario, valoración de propiedades, evaluación de propiedades, bienes raíces, asesoría en bienes raíces, tasaciones en Chile, ROW Bienes Raíces, Chile"
+  />
 
   <link rel="canonical" href="https://rowre.cl/" />
 
@@ -33,20 +36,20 @@
   <meta property="og:title" content="ROW Bienes Raíces | Asesoría inmobiliaria y tasaciones en Chile" />
   <meta
     property="og:description"
-    content="Asesoría inmobiliaria y tasaciones con criterio profesional, enfoque técnico y contacto directo."
+    content="Asesoría inmobiliaria y tasaciones en Chile con criterio técnico, mirada comercial y contacto directo."
   />
   <meta property="og:url" content="https://rowre.cl/" />
   <meta property="og:site_name" content="ROW Bienes Raíces" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ROW Bienes Raíces, asesoría inmobiliaria y tasaciones" />
+  <meta property="og:image:alt" content="ROW Bienes Raíces, asesoría inmobiliaria y tasaciones en Chile" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ROW Bienes Raíces | Asesoría inmobiliaria y tasaciones en Chile" />
   <meta
     name="twitter:description"
-    content="Asesoría inmobiliaria y tasaciones con criterio profesional, enfoque técnico y contacto directo."
+    content="Asesoría inmobiliaria y tasaciones en Chile con criterio técnico, comercial y contacto directo."
   />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" />
 
@@ -62,6 +65,7 @@
         "url": "https://rowre.cl/",
         "email": "contacto@rowre.cl",
         "telephone": "+56 9 9991 7298",
+        "logo": "https://rowre.cl/",
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer service",
@@ -92,8 +96,31 @@
         "serviceType": [
           "Asesoría inmobiliaria",
           "Tasaciones",
+          "Tasación inmobiliaria",
           "Evaluación de propiedades",
           "Orientación para decisiones inmobiliarias"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rowre.cl/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué servicios ofrece ROW Bienes Raíces?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ROW Bienes Raíces ofrece asesoría inmobiliaria, tasaciones, evaluación de propiedades y orientación para decisiones vinculadas a compraventa, inversión y análisis de escenarios."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo solicitar una tasación o asesoría?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes solicitar contacto a través del formulario del sitio, por correo electrónico o por WhatsApp para revisar tu caso de manera directa."
+            }
+          }
         ]
       }
     ]
@@ -429,6 +456,13 @@
       margin-top: 28px;
     }
 
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
     .card {
       background: #fffdfa;
       border: 1px solid var(--line);
@@ -485,6 +519,37 @@
       font-size: 1rem;
     }
 
+    .seo-text {
+      margin-top: 28px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .seo-text-block {
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .seo-text-block h3 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #111;
+    }
+
+    .seo-text-block p {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #49453f;
+      line-height: 1.85;
+      font-size: 1rem;
+    }
+
     .cta-band {
       background: #2d2b29;
       color: white;
@@ -512,6 +577,36 @@
       line-height: 1.8;
       color: rgba(255,255,255,0.86);
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .faq-item {
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      line-height: 1.3;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
     }
 
     .contact {
@@ -678,7 +773,8 @@
       .split-dark,
       .section-header,
       .contact-grid,
-      .services-list {
+      .services-list,
+      .grid-2 {
         grid-template-columns: 1fr;
       }
 
@@ -708,7 +804,9 @@
       .dark-panel,
       .contact-box,
       .card,
-      .service-item {
+      .service-item,
+      .seo-text-block,
+      .faq-item {
         padding: 22px;
       }
 
@@ -739,6 +837,7 @@
       <nav class="nav" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
         <a href="#ventajas">Ventajas</a>
+        <a href="#faq">Preguntas frecuentes</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -750,25 +849,25 @@
         <div class="hero-grid">
           <div>
             <p class="eyebrow">Asesoría inmobiliaria · Tasaciones · Evaluación técnica</p>
-            <h1 id="hero-title">Asesoría inmobiliaria y tasaciones con criterio profesional</h1>
+            <h1 id="hero-title">Asesoría inmobiliaria y tasaciones en Chile con criterio técnico y profesional</h1>
             <p class="hero-copy">
-              En ROW Bienes Raíces entregamos asesoría inmobiliaria y apoyo técnico para
+              En ROW Bienes Raíces entregamos asesoría inmobiliaria y tasaciones para
               personas y empresas que necesitan claridad antes de tomar decisiones.
-              Analizamos escenarios, ordenamos antecedentes y acompañamos cada caso con
-              una mirada sobria, práctica y bien fundamentada.
+              Analizamos escenarios, evaluamos propiedades, ordenamos antecedentes y
+              acompañamos cada caso con una mirada sobria, práctica y bien fundamentada.
             </p>
             <div class="hero-actions">
-              <a href="#contacto" class="btn btn-dark">Solicitar contacto</a>
+              <a href="#contacto" class="btn btn-dark">Solicitar tasación o asesoría</a>
               <a href="#servicios" class="btn">Ver servicios</a>
             </div>
-            <p class="hero-note">Atención directa, sin intermediarios.</p>
+            <p class="hero-note">Atención directa, sin intermediarios, con enfoque técnico y comercial.</p>
           </div>
 
           <div class="hero-side">
             <div class="hero-side-box">
               <p>Asesoría inmobiliaria</p>
               <p>Tasaciones</p>
-              <p>Evaluación de escenarios</p>
+              <p>Evaluación de propiedades</p>
               <p>Orientación para toma de decisiones</p>
             </div>
           </div>
@@ -786,7 +885,9 @@
             <div class="dark-text">
               Trabajamos en asesoría inmobiliaria, análisis de alternativas, ordenamiento de
               antecedentes y acompañamiento en decisiones vinculadas a propiedades,
-              inversión, evaluación y criterio comercial.
+              inversión, valorización y criterio comercial. Si necesitas una tasación
+              inmobiliaria o apoyo para evaluar una propiedad, buscamos darte una base
+              más clara para decidir.
             </div>
 
             <ul class="dark-list">
@@ -805,7 +906,7 @@
             <h3>Asesoría inmobiliaria</h3>
             <p>
               Apoyo para evaluar alternativas, ordenar antecedentes y tomar decisiones
-              con mayor claridad en compraventa, estrategia o análisis de escenarios.
+              con mayor claridad en compraventa, estrategia, inversión o análisis de escenarios.
             </p>
           </article>
 
@@ -813,7 +914,7 @@
             <h3>Tasaciones</h3>
             <p>
               Tasaciones con enfoque técnico y comercial, orientadas a entender mejor
-              el valor de una propiedad y su contexto.
+              el valor de una propiedad, su contexto y sus variables relevantes.
             </p>
           </article>
 
@@ -821,7 +922,7 @@
             <h3>Evaluación de propiedades</h3>
             <p>
               Revisión de antecedentes y análisis general para detectar fortalezas,
-              riesgos y oportunidades antes de avanzar.
+              riesgos y oportunidades antes de avanzar en una decisión inmobiliaria.
             </p>
           </article>
 
@@ -844,7 +945,8 @@
             Nuestro objetivo no es recargar el mensaje, sino dar claridad.
             Si buscas asesoría inmobiliaria, tasaciones o apoyo para evaluar una propiedad,
             la idea es que encuentres una contraparte profesional, directa y útil desde el
-            primer contacto.
+            primer contacto. No se trata solo de hablar de bienes raíces, sino de entender
+            el escenario, ordenar la información y bajar la decisión a algo concreto.
           </div>
         </div>
 
@@ -853,7 +955,7 @@
             <h3>Claridad</h3>
             <p>
               Comunicación directa y ordenada, enfocada en entender el caso y aterrizar
-              la decisión inmobiliaria.
+              la decisión inmobiliaria con mayor seguridad.
             </p>
           </article>
 
@@ -873,6 +975,31 @@
             </p>
           </article>
         </div>
+
+        <div class="seo-text">
+          <article class="seo-text-block">
+            <h3>Tasaciones inmobiliarias en Chile</h3>
+            <p>
+              Una tasación inmobiliaria sirve para entender mejor el valor de mercado de una propiedad
+              y observar el contexto en que se encuentra. En muchos casos, antes de vender, comprar,
+              invertir o redefinir una estrategia patrimonial, conviene contar con una mirada técnica y
+              comercial que ayude a ordenar variables, antecedentes y expectativas. En ROW Bienes Raíces
+              trabajamos este tipo de análisis con una lógica práctica, buscando que la información sea
+              realmente útil para la toma de decisiones.
+            </p>
+          </article>
+
+          <article class="seo-text-block">
+            <h3>Asesoría en bienes raíces para personas y empresas</h3>
+            <p>
+              La asesoría inmobiliaria no siempre consiste en ejecutar una compraventa. Muchas veces el
+              valor está en revisar escenarios, detectar riesgos, entender mejor una propiedad o definir
+              cómo avanzar en una negociación. Por eso, además de tasaciones, entregamos orientación para
+              evaluar oportunidades inmobiliarias, ordenar información relevante y abordar cada caso con
+              una contraparte profesional. La idea es generar claridad antes de decidir, no después.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -881,9 +1008,60 @@
         <h2 id="cta-title">Si necesitas asesoría inmobiliaria o una tasación, conversemos</h2>
         <p>
           Déjanos tus datos y nos pondremos en contacto para revisar tu caso,
-          entender tu necesidad y orientarte de manera directa.
+          entender tu necesidad y orientarte de manera directa, sobria y bien enfocada.
         </p>
-        <a href="#contacto" class="btn btn-light">Quiero que me contacten</a>
+        <a href="#contacto" class="btn btn-light">Quiero solicitar contacto</a>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="faq-title">Preguntas frecuentes</h2>
+          <div class="section-copy">
+            Esta sección ayuda a aclarar dudas habituales y también refuerza el posicionamiento
+            orgánico del sitio con términos que las personas efectivamente buscan en Google.
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>¿Qué hace una asesoría inmobiliaria?</h3>
+            <p>
+              Una asesoría inmobiliaria ayuda a evaluar escenarios, revisar antecedentes,
+              detectar riesgos y orientar decisiones relacionadas con propiedades, inversión
+              o compraventa. No siempre implica ejecutar una operación; muchas veces su valor
+              está en ordenar el panorama antes de avanzar.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>¿Para qué sirve una tasación inmobiliaria?</h3>
+            <p>
+              Sirve para tener una referencia técnica y comercial del valor de una propiedad.
+              Puede ser útil antes de vender, comprar, negociar, invertir o revisar una estrategia
+              patrimonial vinculada a bienes raíces.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>¿ROW Bienes Raíces atiende solo un tipo de cliente?</h3>
+            <p>
+              No. El enfoque está orientado tanto a personas como a empresas que necesitan
+              apoyo para entender mejor un escenario inmobiliario, evaluar una propiedad o
+              solicitar una tasación.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>¿Cómo se solicita contacto?</h3>
+            <p>
+              Puedes escribir por WhatsApp, enviar un correo o completar el formulario del sitio.
+              La idea es abrir una conversación directa para revisar tu caso y ver cuál es la
+              necesidad concreta.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -906,6 +1084,8 @@
           <div class="contact-box">
             <p class="form-intro">
               Completa el formulario y te contactaremos directamente para revisar tu caso.
+              Puedes escribirnos si necesitas una tasación, asesoría inmobiliaria o una
+              evaluación general de una propiedad.
             </p>
 
             <form action="https://formspree.io/f/mjgpjgjl" method="POST">
@@ -938,7 +1118,7 @@
                 </div>
 
                 <div class="field-full">
-                  <button class="submit" type="submit">Enviar</button>
+                  <button class="submit" type="submit">Enviar solicitud</button>
                 </div>
               </div>
             </form>
@@ -954,14 +1134,14 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>ROW Bienes Raíces · Asesoría inmobiliaria y tasaciones</div>
+      <div>ROW Bienes Raíces · Asesoría inmobiliaria y tasaciones en Chile</div>
       <div>rowre.cl</div>
     </div>
   </footer>
 
   <a
     class="whatsapp-float"
-    href="https://wa.me/56999917298?text=Hola%2C%20quiero%20asesor%C3%ADa%20inmobiliaria%20o%20una%20tasaci%C3%B3n%20con%20ROW%20Bienes%20Ra%C3%ADces"
+    href="https://wa.me/56999917298?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20inmobiliaria%20o%20una%20tasaci%C3%B3n%20con%20ROW%20Bienes%20Ra%C3%ADces"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Abrir conversación por WhatsApp con ROW Bienes Raíces"
