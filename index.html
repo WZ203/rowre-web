@@ -59,6 +59,16 @@
   />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" />
 
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WBVNH9SZ');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -833,6 +843,11 @@
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBVNH9SZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="/" class="brand" aria-label="Ir al inicio de ROW Bienes Raíces">
@@ -866,6 +881,8 @@
                 rel="noopener noreferrer"
                 class="btn btn-dark"
                 aria-label="Solicitar tasación o asesoría por WhatsApp"
+                data-track="whatsapp_click"
+                data-location="hero_principal"
               >Solicitar tasación o asesoría</a>
               <a href="#servicios" class="btn">Ver servicios</a>
             </div>
@@ -971,6 +988,8 @@
             rel="noopener noreferrer"
             class="btn btn-light"
             aria-label="Hablar por WhatsApp con ROW Bienes Raíces"
+            data-track="whatsapp_click"
+            data-location="servicios"
           >Hablar por WhatsApp</a>
         </div>
       </div>
@@ -1055,6 +1074,8 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Solicitar contacto por WhatsApp"
+          data-track="whatsapp_click"
+          data-location="cta_band"
         >Quiero solicitar contacto</a>
       </div>
     </section>
@@ -1133,7 +1154,7 @@
               evaluación general de una propiedad.
             </p>
 
-            <form action="https://formspree.io/f/mjgpjgjl" method="POST">
+            <form action="https://formspree.io/f/mjgpjgjl" method="POST" id="contact-form">
               <input type="hidden" name="_subject" value="Nuevo contacto desde ROW Bienes Raíces" />
               <input type="hidden" name="_language" value="es" />
               <input type="hidden" name="_captcha" value="false" />
@@ -1164,7 +1185,7 @@
                 </div>
 
                 <div class="field-full">
-                  <button class="submit" type="submit">Enviar solicitud</button>
+                  <button class="submit" type="submit" data-track="form_submit_button">Enviar solicitud</button>
                 </div>
               </div>
             </form>
@@ -1191,8 +1212,37 @@
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Abrir conversación por WhatsApp con ROW Bienes Raíces"
+    data-track="whatsapp_click"
+    data-location="floating_button"
   >
     WhatsApp
   </a>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a[data-track="whatsapp_click"]');
+      if (!link) return;
+
+      window.dataLayer.push({
+        event: 'whatsapp_click',
+        event_category: 'contacto',
+        event_label: link.getAttribute('data-location') || 'sin_ubicacion',
+        link_url: link.href
+      });
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function () {
+        window.dataLayer.push({
+          event: 'form_submit',
+          event_category: 'lead',
+          event_label: 'formulario_contacto'
+        });
+      });
+    }
+  </script>
 </body>
 </html>
